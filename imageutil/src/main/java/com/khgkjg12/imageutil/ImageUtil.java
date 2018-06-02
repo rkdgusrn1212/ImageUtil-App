@@ -41,7 +41,7 @@ public class ImageUtil {
         return result;
     }
 
-    public static Bitmap getCircledImage(@NonNull Bitmap oriBitmap,@NonNull Resources res){
+    public static Bitmap getCircledImage(@NonNull Resources res, @NonNull Bitmap oriBitmap){
         Bitmap mask = BitmapFactory.decodeResource(res, R.drawable.circle_mask);
         Bitmap result = getMaskedImage(oriBitmap,mask);
         mask.recycle();
